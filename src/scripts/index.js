@@ -1,5 +1,5 @@
-import { user } from "/src/scripts/services/user.js"
-import { repositories } from "/src/scripts/services/repositories.js"
+import { user } from './services/user.js'
+import { repositories } from "./services/respositories.js"
 
 document.getElementById('btn-search').addEventListener('click', () => {
     const userName = document.getElementById('input-search').value
@@ -38,7 +38,7 @@ function getUserRepositories(userName) {
         let repositoriesItens = ""
 
         reposData.forEach(repo => {
-            repositoriesItens += `<li> <a href= "${repo.htm_url}" target="_blank">${repo.name}</a></li>`
+            repositoriesItens += `<li> <a href= "${repo.html_url}" target="_blank">${repo.name}</a></li>`
         });
 
         document.querySelector('.profile-data').innerHTML += `<div class="repositories section">
